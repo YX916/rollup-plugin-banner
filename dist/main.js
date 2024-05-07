@@ -1,4 +1,3 @@
-"use strict";
 var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
     function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
     return new (P || (P = Promise))(function (resolve, reject) {
@@ -35,13 +34,9 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
         if (op[0] & 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };
     }
 };
-var __importDefault = (this && this.__importDefault) || function (mod) {
-    return (mod && mod.__esModule) ? mod : { "default": mod };
-};
-Object.defineProperty(exports, "__esModule", { value: true });
-var fs_1 = __importDefault(require("fs"));
-var path_1 = require("path");
-function default_1(options) {
+import fs from 'fs';
+import { resolve } from 'path';
+export default function RollupBanner(options) {
     var banner = options.banner;
     var footer = options.footer;
     var includeRegexp = new RegExp(/\.(css|[mc]?js)$/i);
@@ -59,10 +54,10 @@ function default_1(options) {
                     for (_i = 0, _a = Object.entries(bundle); _i < _a.length; _i++) {
                         module_1 = _a[_i];
                         fileName = module_1[0];
-                        filePath = (0, path_1.resolve)(rootDir, fileName);
+                        filePath = resolve(rootDir, fileName);
                         if (includeRegexp.test(fileName) && !excludeRegexp.test(fileName)) {
                             try {
-                                data = fs_1.default.readFileSync(filePath, {
+                                data = fs.readFileSync(filePath, {
                                     encoding: 'utf8',
                                 });
                                 data = data.replace(/(\n|\r\n)$/, '');
@@ -73,7 +68,7 @@ function default_1(options) {
                                     data = "".concat(data, "\n").concat(footer);
                                 }
                                 // Save
-                                fs_1.default.writeFileSync(filePath, data);
+                                fs.writeFileSync(filePath, data);
                             }
                             catch (e) {
                                 console.error(e);
@@ -86,4 +81,3 @@ function default_1(options) {
         }
     };
 }
-exports.default = default_1;

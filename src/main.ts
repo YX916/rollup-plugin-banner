@@ -4,7 +4,7 @@ import { BannerPluginOptions } from './types';
 import { OutputOptions, OutputBundle } from "rollup";
 
 
-export default function (options: BannerPluginOptions): any {
+export default function RollupBanner(options: BannerPluginOptions): any {
     const banner: string | undefined = options.banner;
     const footer: string | undefined = options.footer;
     const includeRegexp: RegExp = new RegExp(/\.(css|[mc]?js)$/i);
