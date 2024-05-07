@@ -10,7 +10,7 @@
   ],
   "scripts": {
     "build": "tsc",
-    "publish": "npm publish --access public"
+    "pub": "npm publish --access public"
   },
   "author": "杨永鑫",
   "keywords": [
