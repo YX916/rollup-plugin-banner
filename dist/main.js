@@ -41,7 +41,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 var fs_1 = __importDefault(require("fs"));
 var path_1 = require("path");
-function RollupBanner(options) {
+function default_1(options) {
     var banner = options.banner;
     var footer = options.footer;
     var includeRegexp = new RegExp(/\.(css|[mc]?js)$/i);
@@ -86,4 +86,4 @@ function RollupBanner(options) {
         }
     };
 }
-exports.default = RollupBanner;
+exports.default = default_1;

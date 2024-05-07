@@ -1,7 +1,7 @@
 {
   "name": "@yang-yong-xin/rollup-plugin-banner",
   "version": "2.0.0",
-  "description": "Node 常用工具包",
+  "description": "Add a banner or footer to the top or bottom of the generated chunk.",
   "main": "./dist/main.js",
   "types": "./dist/main.d.ts",
   "files": [
@@ -9,7 +9,7 @@
   ],
   "scripts": {
     "build": "tsc",
-    "publish": "tsc && npm publish --access public"
+    "publish": "npm publish --access public"
   },
   "author": "杨永鑫",
   "keywords": [
