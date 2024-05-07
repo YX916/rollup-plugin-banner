@@ -13,6 +13,7 @@
   },
   "author": "杨永鑫",
   "keywords": [
+    "rollup plugin",
     "rollup-plugin-banner",
     "typescript"
   ],
