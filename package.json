@@ -1,6 +1,6 @@
 {
   "name": "@yyx916/rollup-plugin-banner",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Add a banner or footer to the top or bottom of the generated chunk.",
   "main": "./dist/main.js",
   "type": "module",
