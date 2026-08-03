@@ -34,15 +34,15 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
         if (op[0] & 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };
     }
 };
-import fs from 'fs';
-import { resolve } from 'path';
+import fs from "fs";
+import { resolve } from "path";
 export default function RollupBanner(options) {
-    var banner = options.banner;
+    var header = options.header;
     var footer = options.footer;
     var includeRegexp = new RegExp(/\.(css|[mc]?js)$/i);
     var excludeRegexp = new RegExp(/vendor/);
     return {
-        name: 'plugin-banner',
+        name: "plugin-banner",
         writeBundle: function (options, bundle) {
             return __awaiter(this, void 0, void 0, function () {
                 var rootDir, _i, _a, module_1, fileName, filePath, data;
@@ -50,7 +50,7 @@ export default function RollupBanner(options) {
                     if (typeof options.dir === undefined) {
                         return [2 /*return*/];
                     }
-                    rootDir = options.dir || '';
+                    rootDir = options.dir || "";
                     for (_i = 0, _a = Object.entries(bundle); _i < _a.length; _i++) {
                         module_1 = _a[_i];
                         fileName = module_1[0];
@@ -58,11 +58,11 @@ export default function RollupBanner(options) {
                         if (includeRegexp.test(fileName) && !excludeRegexp.test(fileName)) {
                             try {
                                 data = fs.readFileSync(filePath, {
-                                    encoding: 'utf8',
+                                    encoding: "utf8",
                                 });
-                                data = data.replace(/(\n|\r\n)$/, '');
-                                if (typeof banner !== undefined) {
-                                    data = "".concat(banner, "\n").concat(data);
+                                data = data.replace(/(\n|\r\n)$/, "");
+                                if (typeof header !== undefined) {
+                                    data = "".concat(header, "\n").concat(data);
                                 }
                                 if (typeof footer !== undefined) {
                                     data = "".concat(data, "\n").concat(footer);
@@ -78,6 +78,6 @@ export default function RollupBanner(options) {
                     return [2 /*return*/];
                 });
             });
-        }
+        },
     };
 }

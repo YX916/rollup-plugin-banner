@@ -3,6 +3,7 @@
     "allowSyntheticDefaultImports": true,
     "noImplicitAny": true,
     "module": "ESNext",
+    "removeComments": false,
     "moduleResolution": "node",
     "resolveJsonModule": true,
     "esModuleInterop": true,
