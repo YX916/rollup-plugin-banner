@@ -21,7 +21,7 @@
   "homepage": "https://github.com/YX916",
   "repository": {
     "type": "git",
-    "url": "https://github.com/YX916/rollup-plugin-banner"
+    "url": "git+https://github.com/YX916/rollup-plugin-banner.git"
   },
   "bugs": {
     "url": "https://github.com/YX916/rollup-plugin-banner/issues"
