@@ -47,7 +47,7 @@ export default function RollupBanner(options) {
             return __awaiter(this, void 0, void 0, function () {
                 var rootDir, _i, _a, module_1, fileName, filePath, data;
                 return __generator(this, function (_b) {
-                    if (typeof options.dir === undefined) {
+                    if (options.dir === undefined) {
                         return [2 /*return*/];
                     }
                     rootDir = options.dir || "";
@@ -61,10 +61,10 @@ export default function RollupBanner(options) {
                                     encoding: "utf8",
                                 });
                                 data = data.replace(/(\n|\r\n)$/, "");
-                                if (typeof header !== undefined) {
+                                if (header !== undefined) {
                                     data = "".concat(header, "\n").concat(data);
                                 }
-                                if (typeof footer !== undefined) {
+                                if (footer !== undefined) {
                                     data = "".concat(data, "\n").concat(footer);
                                 }
                                 // Save
