@@ -3,8 +3,8 @@
   "version": "1.2.0",
   "description": "Add a banner or footer to the top or bottom of the generated chunk.",
   "type": "module",
-  "main": "./dist/main.js",
-  "types": "./dist/types/index.d.ts",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "files": [
     "dist"
   ],

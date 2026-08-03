@@ -1,7 +1,20 @@
 import fs from "fs";
 import { resolve } from "path";
-import { BannerPluginOptions } from "./types";
 import { OutputOptions, OutputBundle } from "rollup";
+
+export interface BannerPluginOptions {
+  /**
+   * 输出文件头部插入 banner 注释文本
+   * @example '/*! copyright 2026 *\\/'
+   */
+  header?: string;
+
+  /**
+   * 输出文件尾部插入 banner 注释文本
+   * @example '/* End of file *\\/'
+   */
+  footer?: string;
+}
 
 export default function RollupBanner(options: BannerPluginOptions): any {
   const header: string | undefined = options.header;
