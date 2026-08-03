@@ -2,18 +2,19 @@
   "compilerOptions": {
     "allowSyntheticDefaultImports": true,
     "noImplicitAny": true,
-    "module": "ESNext",
+    "module": "nodenext",
     "removeComments": false,
-    "moduleResolution": "node",
+    "moduleResolution": "nodenext",
     "resolveJsonModule": true,
     "esModuleInterop": true,
     "checkJs": false,
-    "target": "ES5",
+    "target": "es6",
     "allowJs": true,
     "types": [
       "node"
     ],
     "declaration": true, // 是否生成声明文件
+    "rootDir": "./lib",
     "outDir": "./dist",
     "strict": true,
     "lib": [
